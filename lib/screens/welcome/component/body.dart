@@ -4,6 +4,7 @@ import 'package:login/costant.dart';
 import 'package:login/screens/Login/loginscreen.dart';
 
 
+import '../../Signup/signup_screen.dart';
 import 'background.dart';
 class Body extends StatelessWidget {
 
@@ -36,14 +37,16 @@ class Body extends StatelessWidget {
         ),
         SizedBox(height: size.height*0.04,),
         RoundedButton(text: "LOGIN",press: (){
-          Navigator.push(context,MaterialPageRoute(builder: (context){return LogginScreen();
+          Navigator.push(context,MaterialPageRoute(builder: (context){return LoginScreen();
           }
           ),
           );
 
         }
         ),
-        RoundedButton(text: "SIGHN UP",press: (){},color: primarylightcolor,Textcolor: Colors.black45 ,)
+        RoundedButton(text: "SIGHN UP",press: (){Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return signUpScreen();
+        }));},color: primarylightcolor,Textcolor: Colors.black45 ,)
 
 
       ],

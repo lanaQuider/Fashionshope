@@ -34,7 +34,7 @@ class Body extends StatelessWidget {
             ),
             Image.asset(
               "assets/icons/fashionn.png",
-              height: size.height * 0.35,
+              height: size.height * 0.31,
             ),
             SizedBox(
               height: size.height * 0.03,

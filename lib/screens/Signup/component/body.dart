@@ -27,22 +27,26 @@ class Body extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
           ),
             SizedBox(
-              height: size.height * 0.03,
+              height: size.height * 0.01,
             ),
             Image.asset("assets/icons/phone.png",
 
-            height: size.height*0.25,
+            height: size.height*0.21,
               
             ), SizedBox(
-              height: size.height * 0.02,
+              height: size.height * 0.01,
             ),
             RoundedInputField(hintText: "Enter Your Name ", onChanged:(value) {} ),
 
-            RoundedInputField(hintText: "Enter Your Email ", onChanged:(value) {} ),
+            RoundedInputField(icon: Icons.alternate_email_sharp,hintText: "Enter Your Email ", onChanged:(value) {} ),
+            RoundedInputField(icon: Icons.add_call,hintText: "Enter Your Phone Number ", onChanged:(value) {} ),
+
             RoundedPasswordField(onChanged: (value){}),
+            RoundedPasswordField(hintText:"Confirm Password",onChanged: (value){}),
+
             RoundedButton(press: (){}, text: "Signup"),
             SizedBox(
-              height: size.height * 0.02,
+              height: size.height * 0.01,
             ),
             AlreadyHaveAnAccountCheck(press: (){
 

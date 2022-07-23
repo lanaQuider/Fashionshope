@@ -22,42 +22,45 @@ class Body extends StatelessWidget {
 
     return SingleChildScrollView(
       child: background(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "LOGIN",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: size.height * 0.03,
-            ),
-            Image.asset(
-              "assets/icons/fashionn.png",
-              height: size.height * 0.31,
-            ),
-            SizedBox(
-              height: size.height * 0.03,
-            ),
-            RoundedInputField(
-              hintText: "Your Email",
-              onChanged: (value) {},
-            ),
-            RoundedPasswordField(
-              onChanged: (value) {},
-            ),
-            RoundedButton(press: () {}, text: "LOGIN"),
-            SizedBox(
-              height: size.height * 0.03,
-            ),
-            AlreadyHaveAnAccountCheck(
-              press: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return signUpScreen();
-                }));
-              },
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "LOGIN",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: size.height * 0.03,
+              ),
+              Image.asset(
+                "assets/icons/fashionn.png",
+                height: size.height * 0.31,
+              ),
+              SizedBox(
+                height: size.height * 0.03,
+              ),
+              RoundedInputField(
+                hintText: "Your Email",
+                onChanged: (value) {},
+              ),
+              RoundedPasswordField(
+                onChanged: (value) {},
+              ),
+              RoundedButton(press: () {}, text: "LOGIN"),
+
+              SizedBox(
+                height: size.height * 0.03,
+              ),
+              AlreadyHaveAnAccountCheck(
+                press: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return signUpScreen();
+                  }));
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
